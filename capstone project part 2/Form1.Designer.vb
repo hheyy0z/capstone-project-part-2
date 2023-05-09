@@ -33,9 +33,9 @@ Partial Class Form1
         'PicWheel
         '
         Me.PicWheel.Image = Global.capstone_project_part_2.My.Resources.Resources.WOF2
-        Me.PicWheel.Location = New System.Drawing.Point(165, 51)
+        Me.PicWheel.Location = New System.Drawing.Point(28, 28)
         Me.PicWheel.Name = "PicWheel"
-        Me.PicWheel.Size = New System.Drawing.Size(938, 517)
+        Me.PicWheel.Size = New System.Drawing.Size(1127, 460)
         Me.PicWheel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PicWheel.TabIndex = 0
         Me.PicWheel.TabStop = False
@@ -43,7 +43,7 @@ Partial Class Form1
         'btnSpin
         '
         Me.btnSpin.Font = New System.Drawing.Font("Ravie", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpin.Location = New System.Drawing.Point(224, 612)
+        Me.btnSpin.Location = New System.Drawing.Point(237, 570)
         Me.btnSpin.Name = "btnSpin"
         Me.btnSpin.Size = New System.Drawing.Size(318, 114)
         Me.btnSpin.TabIndex = 1
@@ -53,12 +53,16 @@ Partial Class Form1
         'btnExit
         '
         Me.btnExit.Font = New System.Drawing.Font("Ravie", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Location = New System.Drawing.Point(714, 612)
+        Me.btnExit.Location = New System.Drawing.Point(743, 571)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(318, 113)
         Me.btnExit.TabIndex = 2
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 150
         '
         'Form1
         '

@@ -1,85 +1,104 @@
 ﻿Public Class Form1
+    Dim startSpin As Integer
+    Dim endSpin As Integer
 
-    Dim intval As Integer = 0
     Private Sub btnSpin_Click(sender As Object, e As EventArgs) Handles btnSpin.Click
 
-        intval += 1
-        If intval = 1 Then
-            PicWheel.Image = My.Resources.WOF2
+        endSpin = Int(Rnd() * 24 + 50)
+        Timer1.Enabled = True
 
-        ElseIf intval = 2 Then
+
+    End Sub
+
+    Public Sub changeImage(num As Integer)
+        If num = 1 Then
+            PicWheel.Image = My.Resources.WOF1
+
+        ElseIf num = 2 Then
             PicWheel.Image = My.Resources.WOF3
 
-        ElseIf intval = 3 Then
+        ElseIf num = 3 Then
             PicWheel.Image = My.Resources.WOF4
 
-        ElseIf intval = 4 Then
+        ElseIf num = 4 Then
             PicWheel.Image = My.Resources.WOF5
 
-        ElseIf Intval = 5 Then
+        ElseIf num = 5 Then
             PicWheel.Image = My.Resources.WOF6
 
-        ElseIf intval = 6 Then
+        ElseIf num = 6 Then
             PicWheel.Image = My.Resources.WOF7
 
-        ElseIf intval = 7 Then
+        ElseIf num = 7 Then
             PicWheel.Image = My.Resources.WOF8
 
-        ElseIf intval = 8 Then
+        ElseIf num = 8 Then
             PicWheel.Image = My.Resources.wof9
 
-        ElseIf intval = 9 Then
+        ElseIf num = 9 Then
             PicWheel.Image = My.Resources.wof10
 
-        ElseIf intval = 10 Then
+        ElseIf num = 10 Then
             PicWheel.Image = My.Resources.wof11
 
-        ElseIf intval = 11 Then
+        ElseIf num = 11 Then
             PicWheel.Image = My.Resources.wof12
 
-        ElseIf intval = 12 Then
+        ElseIf num = 12 Then
             PicWheel.Image = My.Resources.wof13
 
-        ElseIf intval = 13 Then
+        ElseIf num = 13 Then
             PicWheel.Image = My.Resources.wof14
 
-        ElseIf intval = 14 Then
+        ElseIf num = 14 Then
             PicWheel.Image = My.Resources.wof15
 
-        ElseIf intval = 15 Then
+        ElseIf num = 15 Then
             PicWheel.Image = My.Resources.wof16
 
-        ElseIf intval = 16 Then
+        ElseIf num = 16 Then
             PicWheel.Image = My.Resources.wof17
 
-        ElseIf intval = 17 Then
+        ElseIf num = 17 Then
             PicWheel.Image = My.Resources.wof18
 
-        ElseIf intval = 18 Then
+        ElseIf num = 18 Then
             PicWheel.Image = My.Resources.wof19
 
-        ElseIf intval = 19 Then
+        ElseIf num = 19 Then
             PicWheel.Image = My.Resources.WOF2
 
-        ElseIf intval = 20 Then
+        ElseIf num = 20 Then
             PicWheel.Image = My.Resources.wof21
 
-        ElseIf intval = 21 Then
+        ElseIf num = 21 Then
             PicWheel.Image = My.Resources.wof22
 
-        ElseIf intval = 22 Then
+        ElseIf num = 22 Then
             PicWheel.Image = My.Resources.wof23
 
-        ElseIf intval = 23 Then
+        ElseIf num = 23 Then
             PicWheel.Image = My.Resources.wof24
 
-        ElseIf intval = 24 Then
+        ElseIf num = 24 Then
             PicWheel.Image = My.Resources.wof25
 
-        Else
-            intval = 0
+        End If
+    End Sub
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        changeImage(startSpin Mod 25)
 
 
+        If startSpin = endSpin Then
+            Timer1.Enabled = False
+            finalImage(startSpin)
+        End If
 
+        startSpin = startSpin + 1
+
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
     End Sub
 End Class
